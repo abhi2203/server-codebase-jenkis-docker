@@ -1,13 +1,6 @@
 pipeline {
     agent { docker { image 'maven:3.8.4-openjdk-11-slim' } }
     stages {
-      stage('Clone Repo') {
-        steps {
-          git url: 'https://github.com/abhi2203/server-codebase-jenkis-docker.git',
-           credentialsId: '836ffaf9-fc8a-4f98-bdd6-26c3f1083e9c',
-           branch: 'master'
-        }
-      }
       stage('Build') {
           steps {
              sh 'mvn --version'
