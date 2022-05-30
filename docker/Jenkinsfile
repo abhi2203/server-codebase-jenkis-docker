@@ -5,7 +5,7 @@ pipeline {
         steps {
           git url: 'https://github.com/abhi2203/server-codebase-jenkis-docker.git',
            credentialsId: '836ffaf9-fc8a-4f98-bdd6-26c3f1083e9c',
-           branch: 'master'
+           branch: 'origin/master'
         }
       }
       stage('Build') {
